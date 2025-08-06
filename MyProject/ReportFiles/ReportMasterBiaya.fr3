@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Version="4.5" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="40651,4031694792" ReportOptions.Description.Text="" ReportOptions.LastChange="40651,4111606597" ScriptLanguage="PascalScript" ScriptText.Text="&#13;&#10;begin&#13;&#10;&#13;&#10;end." PropData="044C65667403600103546F70022D08446174617365747301010C3000000020446174615365743D22667278444244617461736574312220446174615365744E616D653D226672784442446174612200010C3800000020446174615365743D2266727844425065727573616861616E2220446174615365744E616D653D2266727844425065727573616861616E220000095661726961626C65730100055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="60,47248" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="frxDBPerusahaanNAMA" Left="0" Top="3,77953" Width="321,26005" Height="18,89765" DataField="NAMA" DataSet="frxDBPerusahaan" DataSetName="frxDBPerusahaan" Font.Charset="1" Font.Color="-2147483640" Font.Height="-13" Font.Name="Arial" Font.Style="0" ParentFont="False" Text="[frxDBPerusahaan.&#34;NAMA&#34;]"/>
+      <TfrxMemoView Name="Memo2" Left="0" Top="26,45671" Width="188,9765" Height="18,89765" DisplayFormat.DecimalSeparator="," Font.Charset="1" Font.Color="-2147483640" Font.Height="-13" Font.Name="Arial" Font.Style="0" ParentFont="False" Text="Laporan Daftar Biaya"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Height="22,67718" Left="0" Top="181,41744" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDataset1" DataSetName="frxDBData" RowCount="0">
+      <TfrxMemoView Name="frxDBDataKodebiaya" Left="0" Top="0" Width="94,488188976378" Height="18,89765" DataField="Kodebiaya" DataSet="frxDBDataset1" DataSetName="frxDBData" Font.Charset="1" Font.Color="-2147483640" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" Text="[frxDBData.&#34;Kodebiaya&#34;]"/>
+      <TfrxMemoView Name="frxDBDataKeterangan" Left="94,48825" Top="0" Width="188,976377952756" Height="18,89765" DataField="Keterangan" DataSet="frxDBDataset1" DataSetName="frxDBData" Font.Charset="1" Font.Color="-2147483640" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" Text="[frxDBData.&#34;Keterangan&#34;]"/>
+      <TfrxMemoView Name="Memo6" Left="283,46475" Top="0" Width="94,48825" Height="18,89765" DataField="Perkiraan" DataSet="frxDBDataset1" DataSetName="frxDBData" Font.Charset="1" Font.Color="-2147483640" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" Text="[frxDBData.&#34;Perkiraan&#34;]"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="22,67718" Left="0" Top="309,92146" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Left="642,5201" Top="0" Width="75,5906" Height="18,89765" HAlign="haRight" Text="[Page#]"/>
+    </TfrxPageFooter>
+    <TfrxHeader Name="Header1" Height="18,89765" Left="0" Top="139,84261" Width="718,1107">
+      <TfrxMemoView Name="Memo3" Left="0" Top="0" Width="94,48825" Height="18,89765" DisplayFormat.DecimalSeparator="," Font.Charset="1" Font.Color="-2147483640" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" Text="Kode Biaya"/>
+      <TfrxMemoView Name="Memo4" Left="94,48825" Top="0" Width="188,97637795" Height="18,89765" DisplayFormat.DecimalSeparator="," Font.Charset="1" Font.Color="-2147483640" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" Text="Keterangan"/>
+      <TfrxMemoView Name="Memo5" Left="283,46475" Top="0" Width="94,48825" Height="18,89765" DisplayFormat.DecimalSeparator="," Font.Charset="1" Font.Color="-2147483640" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" Text="Perkiraan"/>
+    </TfrxHeader>
+    <TfrxFooter Name="Footer1" Height="22,67718" Left="0" Top="226,7718" Width="718,1107"/>
+  </TfrxReportPage>
+</TfrxReport>

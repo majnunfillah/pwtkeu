@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.18" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="38793,6507510417" ReportOptions.Description.Text="" ReportOptions.LastChange="40170,0243768056" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403480103546F70022D08446174617365747301010C3000000020446174615365743D22667278444244617461736574312220446174615365744E616D653D226672784442446174612200010C3800000020446174615365743D2266727844425065727573616861616E2220446174615365744E616D653D2266727844425065727573616861616E220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" PaperWidth="215,9" PaperHeight="279,4" PaperSize="1" LeftMargin="20" RightMargin="20" TopMargin="10" BottomMargin="10" Columns="1" ColumnWidth="209,5" ColumnPositions.Text="0" HGuides.Text="" VGuides.Text="">
+    <TfrxPageHeader Name="PageHeader1" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="tahoma" Font.Style="0" Height="31,37007874" Left="0" ParentFont="False" Top="87,307143" Width="664,819327">
+      <TfrxMemoView Name="Memo4" Left="0" Top="0" Width="132,28355" Height="30,23624" AllowExpressions="False" Color="16777215" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="tahoma" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" WordWrap="False" VAlign="vaCenter" Text="Kode"/>
+      <TfrxMemoView Name="Memo5" Left="132,28355" Top="0" Width="529,1342" Height="30,23624" AllowExpressions="False" Color="16777215" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="tahoma" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" WordWrap="False" VAlign="vaCenter" Text="Nama Merek"/>
+    </TfrxPageHeader>
+    <TfrxMasterData Name="MasterData1" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="tahoma" Font.Style="0" Height="15,11812" Left="0" ParentFont="False" Top="179,527675" Width="664,819327" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDataset1" DataSetName="frxDBData" RowCount="0">
+      <TfrxMemoView Name="Memo20" Left="136,06308" Top="0" Width="525,35467" Height="15,11812" AllowExpressions="False" DataField="NAMABRD" DataSet="frxDBDataset1" DataSetName="frxDBData" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="tahoma" Font.Style="0" Frame.Typ="2" ParentFont="False" WordWrap="False" Text="[frxDBData.&#34;NAMABRD&#34;]"/>
+      <TfrxMemoView Name="Memo19" Left="0" Top="0" Width="132,28355" Height="15,11812" AllowExpressions="False" DataField="KODEBRD" DataSet="frxDBDataset1" DataSetName="frxDBData" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="tahoma" Font.Style="0" Frame.Typ="3" ParentFont="False" WordWrap="False" Text="[frxDBData.&#34;KODEBRD&#34;]"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="tahoma" Font.Style="0" Height="18,89765" Left="0" ParentFont="False" Top="289,889951" Width="664,819327">
+      <TfrxMemoView Name="Memo17" Left="0" Top="0" Width="188,9765" Height="18,89765" AutoWidth="True" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="dd-mm-yyyy hh:mm:ss" DisplayFormat.Kind="fkDateTime" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="tahoma" Font.Style="0" ParentFont="False" WordWrap="False" Text="Tanggal Cetak [&#60;Date&#62; #ddd-mm-yyyy] [&#60;Time&#62; #dhh:mm:ss]"/>
+      <TfrxMemoView Name="Memo18" Left="487,559370000001" Top="0" Width="173,85838" Height="18,89765" AutoWidth="True" HAlign="haRight" WordWrap="False" Text="Halaman [Page] dari [TotalPages#]"/>
+      <TfrxLineView Name="Line1" Left="0" Top="0" Width="661,417750000001" Height="0" Frame.Typ="4"/>
+    </TfrxPageFooter>
+    <TfrxFooter Name="Footer1" Height="11,33859" Left="0" Top="217,700928" Width="664,819327">
+      <TfrxMemoView Name="Memo31" Left="0" Top="0" Width="661,41775" Height="7,55906" Frame.Typ="4" Text=""/>
+    </TfrxFooter>
+    <TfrxReportTitle Name="ReportTitle1" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="tahoma" Font.Style="0" Height="45,35433071" Left="0" ParentFont="False" Top="18,89765" Width="664,819327">
+      <TfrxMemoView Name="Memo1" Left="0" Top="0" Width="245,66945" Height="18,8976378" AutoWidth="True" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Tahoma" Font.Style="1" ParentFont="False" WordWrap="False" Text="[frxDBPerusahaan.&#34;Nama&#34;]"/>
+      <TfrxMemoView Name="Memo2" Left="0" Top="18,8976378" Width="245,66945" Height="18,8976378" AutoWidth="True" AllowExpressions="False" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Tahoma" Font.Style="1" ParentFont="False" WordWrap="False" Text="Laporan Daftar Merk"/>
+    </TfrxReportTitle>
+  </TfrxReportPage>
+</TfrxReport>

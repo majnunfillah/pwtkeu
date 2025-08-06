@@ -1,0 +1,13 @@
+QuTransaksi asli
+
+      SQL.Add('select a.Perkiraan,c.tanggal,c.note,isnull(d.namacust,'''')+'' ''+a.keterangan Keterangan,a.*,b.keterangan as namaPerkiraan,');
+      SQL.Add('case when a.valas <>''IDR'' then case when (tipetrans=''KM'') or (tipetrans=''BM'') then a.debet');
+      SQL.Add('     when (tipetrans=''KK'') or (tipetrans=''BK'') then a.kredit');
+      SQL.Add('end else 0 end as Jumlah,');
+      SQL.Add('case when (tipetrans=''KM'') or (tipetrans=''BM'') then a.debet');
+      SQL.Add('when (tipetrans=''KK'') or (tipetrans=''BK'') then a.kredit end*Kurs as JumlahRp');
+      SQL.Add('from dbtrans c');
+      SQL.Add('left outer join dbtransaksi a on(a.nobukti=c.nobukti and a.devisi=c.devisi ) ');
+      SQL.Add('left outer join dbperkiraan b on(a.perkiraan=b.perkiraan) ');
+      SQL.Add('left outer join dbcustomer d on(a.kodecust=d.kodecust) ');
+      SQL.Add('where a.nobukti=:0 and c.devisi=:1 order by urut');
