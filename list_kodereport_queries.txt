@@ -1,0 +1,99 @@
+LIST KODE REPORT DAN QUERY DARI FrmReportPreview.pas
+====================================================
+
+KodeReport		Nama Report					Query
+------------------------------------------------------------
+101			Master Perkiraan				Select * from vwPerkiraan a
+10101			Master Aktiva Tetap			Select * from vwaktiva a
+102			Master Neraca				select a.* from vwPerkiraan a
+103			Master Laba Rugi			select a.* from vwLabaRugiHPP a where Bulan=:0 and Tahun=:1 and IsLRHPP=0
+104			Master HPP				select a.* from vwLabaRugiHPP a where Bulan=:0 and Tahun=:1 and IsLRHPP=1
+1101			Daftar Gudang				select a.* from VwGudang a
+1104,1200		Daftar Kelompok Barang			select a.* from vwKelompok a
+1105			Daftar Kategori Barang			select a.* from vwKategori a
+1106			Daftar Sub Kategori Barang		select a.* from vwSubKategori a
+1107			Daftar Jenis Barang			select a.* from vwjenis a
+1108			Daftar Sub Jenis Barang		select a.* from vwSubjenis a
+1110			Daftar Supplier				select a.* from vwBrowsSupp a
+1298			Daftar Customer				select a.* from vwBrowsCust a
+1304			Daftar Valas				select a.* from vwValas a where Month(A.Tanggal)=:0 and year(tanggal)=:1
+20101			Laporan Kas Harian			exec Sp_LapSaldoAwal :0,:1,:2,:3
+20102			Laporan Bank				Complex query with multiple joins and calculations
+
+QUERY DETAILS:
+==============
+
+101 - Master Perkiraan:
+Query: Select * from vwPerkiraan a
+File: ReportMasterPerkiraan.fr3
+
+10101 - Master Aktiva Tetap:
+Query: Select * from vwaktiva a
+File: ReportMasterAktiva.fr3
+
+102 - Master Neraca:
+Query: select a.* from vwPerkiraan a
+File: ReportMasterNeraca.fr3
+
+103 - Master Laba Rugi:
+Query: select a.* from vwLabaRugiHPP a where Bulan=:0 and Tahun=:1 and IsLRHPP=0
+Parameters: PeriodBln, PeriodThn
+File: ReportMasterLabaRugi.fr3
+
+104 - Master HPP:
+Query: select a.* from vwLabaRugiHPP a where Bulan=:0 and Tahun=:1 and IsLRHPP=1
+Parameters: PeriodBln, PeriodThn
+File: ReportMasterLabaRugi.fr3
+
+1101 - Daftar Gudang:
+Query: select a.* from VwGudang a
+File: ReportMasterGudang.fr3
+
+1104,1200 - Daftar Kelompok Barang:
+Query: select a.* from vwKelompok a
+File: ReportMasterKelompok.fr3
+
+1105 - Daftar Kategori Barang:
+Query: select a.* from vwKategori a
+File: ReportMasterKategori.fr3
+
+1106 - Daftar Sub Kategori Barang:
+Query: select a.* from vwSubKategori a
+File: ReportMasterSubKategori.fr3
+
+1107 - Daftar Jenis Barang:
+Query: select a.* from vwjenis a
+File: ReportMasterjenis.fr3
+
+1108 - Daftar Sub Jenis Barang:
+Query: select a.* from vwSubjenis a
+File: ReportMasterSubjenis.fr3
+
+1110 - Daftar Supplier:
+Query: select a.* from vwBrowsSupp a
+File: ReportMasterSupplier.fr3
+
+1298 - Daftar Customer:
+Query: select a.* from vwBrowsCust a
+File: ReportMasterCustomer.fr3
+
+1304 - Daftar Valas:
+Query: select a.* from vwValas a where Month(A.Tanggal)=:0 and year(tanggal)=:1
+Parameters: Bulan.AsInteger, Tahun.AsInteger
+File: ReportMasterValas.fr3
+
+20101 - Laporan Kas Harian:
+Query 1: exec Sp_LapSaldoAwal :0,:1,:2,:3
+Query 2: exec Sp_LapKasHarian :0,:1,:2,:3
+Parameters: Perkiraan.Text, Awal.Date, Akhir.Date, Divisi.Text
+File: ReportKasHarian.fr3 atau ReportKasHarianUSD.fr3 (tergantung Valas)
+
+20102 - Laporan Bank:
+Complex query dengan multiple joins dan calculations
+File: ReportBank.fr3
+
+CATATAN:
+- Semua query menggunakan view (vw) untuk data master
+- Parameter menggunakan :0, :1, :2, dst
+- File report menggunakan ekstensi .fr3
+- Beberapa report memiliki kondisi filter berdasarkan SelectedSemuaRecord 

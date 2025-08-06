@@ -1,0 +1,112 @@
+STRUKTUR MENU PWTKEU - VERSI SEDERHANA
+========================================
+
+Main Menu
+├── File
+│   ├── Login
+│   ├── Password
+│   ├── Konfigurasi
+│   └── Exit
+│
+├── Master Data
+│   ├── Customer & Supplier
+│   │   ├── Customer
+│   │   ├── Supplier
+│   │   └── Contact
+│   │
+│   ├── Barang & Inventory
+│   │   ├── Barang
+│   │   ├── Jenis Barang
+│   │   ├── Kategori
+│   │   ├── Gudang
+│   │   └── Harga Jual
+│   │
+│   ├── Karyawan & Organisasi
+│   │   ├── Karyawan
+│   │   ├── Jabatan
+│   │   ├── Bagian
+│   │   └── Sales
+│   │
+│   ├── Keuangan
+│   │   ├── Perkiraan
+│   │   ├── Pajak
+│   │   ├── Hutang
+│   │   └── Piutang
+│   │
+│   └── Produksi
+│       ├── Mesin
+│       ├── BOM
+│       └── Proses
+│
+├── Transaksi
+│   ├── Pembelian
+│   │   ├── Purchase Order (PO)
+│   │   ├── Pembelian
+│   │   └── Retur Beli
+│   │
+│   ├── Penjualan
+│   │   ├── Sales Order (SO)
+│   │   ├── Penjualan
+│   │   ├── Jual Kasir
+│   │   └── Invoice PL
+│   │
+│   ├── Produksi
+│   │   ├── Jadwal Produksi
+│   │   ├── Produksi
+│   │   ├── Hasil Produksi
+│   │   ├── SPK
+│   │   └── SPB
+│   │
+│   ├── Inventory
+│   │   ├── Transfer
+│   │   ├── Koreksi
+│   │   └── Bon Sementara
+│   │
+│   └── Keuangan
+│       ├── Kas Bank
+│       ├── Memorial
+│       └── Hutang Piutang
+│
+├── Laporan
+│   ├── Master Data
+│   │   ├── Laporan Customer
+│   │   ├── Laporan Barang
+│   │   └── Laporan Karyawan
+│   │
+│   ├── Transaksi
+│   │   ├── Laporan Pembelian
+│   │   ├── Laporan Penjualan
+│   │   └── Laporan Produksi
+│   │
+│   ├── Keuangan
+│   │   ├── Neraca
+│   │   ├── Arus Kas
+│   │   └── Laporan Hutang Piutang
+│   │
+│   └── Report Preview
+│
+├── Setting
+│   ├── User Management
+│   │   ├── Pemakai
+│   │   ├── Menu
+│   │   └── Akses Gudang
+│   │
+│   ├── System
+│   │   ├── Periode
+│   │   ├── Lock Periode
+│   │   └── Tutup Buku
+│   │
+│   └── Posting
+│       ├── Posting
+│       └── Posting Jurnal Oto
+│
+└── Tools
+    ├── Browsing
+    ├── Dashboard
+    └── Desain
+
+KETERANGAN:
+- Menu ini berdasarkan struktur folder dan file yang ada di pwtkeu
+- Setiap menu memiliki form (.dfm) dan unit (.pas) yang sesuai
+- Struktur dapat disesuaikan berdasarkan kebutuhan
+- Total file yang ditemukan: 2000+ file (.dfm dan .pas) 

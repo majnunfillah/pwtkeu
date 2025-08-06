@@ -1,0 +1,151 @@
+STRUKTUR MENU PWTKEU - VERSI DETAIL
+=====================================
+
+Main Menu (MyProject/FrmUtama)
+├── File
+│   ├── Login (Setting/Login/frmLogin)
+│   ├── Password (Setting/Password/frmPassword)
+│   ├── Konfigurasi (Setting/Konfigurasi/FrmKonfigurasi)
+│   └── Exit
+│
+├── Master Data
+│   ├── Customer & Supplier
+│   │   ├── Customer (Master/Customer/FrmCustomer)
+│   │   ├── Supplier (Master/Supplier/FrmSupplier)
+│   │   ├── Contact (Master/Contact/FrmContact)
+│   │   └── CustSupp (Master/CustSupp/FrmCustomer)
+│   │
+│   ├── Barang & Inventory
+│   │   ├── Barang (Master/Barang/FrmBarang)
+│   │   ├── Jenis Barang (Master/JenisBrg/FrmJenisBrg)
+│   │   ├── Kategori (Master/Kategori/FrmKategori)
+│   │   ├── Kelompok Barang (Master/Kelompok Barang/frmKelompokBrg)
+│   │   ├── Gudang (Master/Gudang/frmGudang)
+│   │   └── Harga Jual (Master/HargaJual/frmHargaJual)
+│   │
+│   ├── Karyawan & Organisasi
+│   │   ├── Karyawan (Master/Karyawan/FrmKaryawan)
+│   │   ├── Jabatan (Master/Jabatan/FrmJabatan)
+│   │   ├── Bagian (Master/Bagian/FrmBagian)
+│   │   ├── Area (Master/Area/FrmArea)
+│   │   └── Sales (Master/Sales/Frmsales)
+│   │
+│   ├── Keuangan
+│   │   ├── Perkiraan (Master/Perkiraan/FrmPerkiraan)
+│   │   ├── Pajak (Master/Pajak/FrmPajak)
+│   │   ├── PPn (Master/PPn/FrmPPn)
+│   │   ├── Hutang (Master/Hutang/FrmHutang)
+│   │   ├── Piutang (Master/Piutang/FrmPiutang)
+│   │   └── Valas (Master/Valas/FrmValas)
+│   │
+│   └── Produksi
+│       ├── Mesin (Master/Mesin/frmMesin)
+│       ├── BOM (Trasaksi/BOM/FrmBOM)
+│       ├── Proses (Master/Master Proses/frmProses)
+│       └── Tarif Tenaker (Master/TarifTenaker/frmTarifTenaker)
+│
+├── Transaksi
+│   ├── Pembelian
+│   │   ├── Purchase Order (Trasaksi/PO/FrmPO)
+│   │   ├── Pembelian (Trasaksi/Beli/FrmBeli)
+│   │   ├── Retur Beli (Trasaksi/Retur Beli/FrmRPembelian)
+│   │   └── RBeli (Trasaksi/RBELI/FrmRBeli)
+│   │
+│   ├── Penjualan
+│   │   ├── Sales Order (Trasaksi/SO/FrmSO)
+│   │   ├── Penjualan (Trasaksi/Penjualan/FrmJual)
+│   │   ├── Jual Kasir (Trasaksi/JualKasir/FrmJualKasir)
+│   │   ├── Invoice PL (Trasaksi/InvoicePL/FrmInvoicePL)
+│   │   └── Retur Jual (Trasaksi/ReturJual/FrmRJual)
+│   │
+│   ├── Produksi
+│   │   ├── Jadwal Produksi (Trasaksi/JadwalProduksi/FrmMainJadwalProduksi)
+│   │   ├── Produksi (Trasaksi/Produksi/FrmProduksi)
+│   │   ├── Hasil Produksi (Trasaksi/Hasil Produksi/FrmHasilP)
+│   │   ├── SPK (Trasaksi/SPK/FrmSPK)
+│   │   └── SPB (Trasaksi/SPB/FrmSPB)
+│   │
+│   ├── Inventory
+│   │   ├── Transfer (Trasaksi/Transfer/FrmTransfer)
+│   │   ├── Koreksi (Trasaksi/Koreksi/FrmKoreksi)
+│   │   ├── Bon Sementara (Trasaksi/Bon Sementara/FrmBon)
+│   │   └── Ubah Kemasan (Trasaksi/UbahKemasan/FrmUbahKemasan)
+│   │
+│   └── Keuangan
+│       ├── Kas Bank (Trasaksi/KasBank/FrmKasBank)
+│       ├── Memorial (Trasaksi/Memorial/FrmMemorial)
+│       ├── Hutang Piutang (Trasaksi/Lunas/FrmHutPiut)
+│       └── Anggaran (Trasaksi/Anggaran/FrmAnggaran)
+│
+├── Laporan
+│   ├── Master Data
+│   │   ├── Laporan Customer
+│   │   ├── Laporan Barang
+│   │   └── Laporan Karyawan
+│   │
+│   ├── Transaksi
+│   │   ├── Laporan Pembelian
+│   │   ├── Laporan Penjualan
+│   │   ├── Laporan Produksi
+│   │   └── Laporan Inventory
+│   │
+│   ├── Keuangan
+│   │   ├── Neraca (Master/Neraca/FrmNeraca)
+│   │   ├── Arus Kas (Master/ArusKas/FrmArusKas)
+│   │   ├── Laporan Hutang
+│   │   └── Laporan Piutang
+│   │
+│   └── Report Preview (ReportPreview/FrmMenuReport)
+│
+├── Setting
+│   ├── User Management
+│   │   ├── Pemakai (Setting/Pemakai/FrmPemakai)
+│   │   ├── Menu (Setting/MENU/frmDaftarMenu)
+│   │   └── Akses Gudang (Setting/AksesGudang/FrmSetAkesGudang)
+│   │
+│   ├── System
+│   │   ├── Periode (Setting/Periode/frmSetupperiode)
+│   │   ├── Lock Periode (Setting/Lock Periode/FrmLockPeriod)
+│   │   ├── Tutup Buku (Setting/TutupBuku/FrmProsesTutupBuku)
+│   │   └── Hitung Ulang (Setting/HitungUlang/FrmHitungUlang)
+│   │
+│   ├── Posting
+│   │   ├── Posting (Setting/Posting/FrmPosting)
+│   │   ├── Posting Jurnal Oto (Setting/PostingJurnalOto/FrmPostingJurnalOto)
+│   │   └── Posting Ulang Jurnal Oto (Setting/PostingUlangJurnalOto/FrmPostingUlangJurnalOto)
+│   │
+│   └── Transfer
+│       └── Ajc Transfer (Setting/Ajc Transfer/FrmAjcTransfer)
+│
+└── Tools
+    ├── Browsing (Browsing/FrmBrows)
+    ├── Dashboard (Dasboard/FrmDasboard)
+    ├── Desain (Trasaksi/Desain/FrmDesain)
+    └── Load Data TXT (Trasaksi/LoadDataTXT/FrmLoadDataTXT)
+
+MAPPING FILE UTAMA:
+==================
+- Main Form: MyProject/FrmUtama.dfm
+- Login: Setting/Login/frmLogin.dfm
+- Dashboard: Dasboard/FrmDasboard.dfm
+- Report Menu: ReportPreview/FrmMenuReport.dfm
+
+FOLDER STRUKTUR:
+===============
+├── Browsing/ (2 files)
+├── Dasboard/ (2 files)
+├── Master/ (1000+ files)
+│   ├── AktivaTetap/
+│   ├── Area/
+│   ├── ArusKas/
+│   ├── Barang/
+│   ├── Customer/
+│   ├── Supplier/
+│   └── ... (50+ subfolders)
+├── MyProject/ (2 files)
+├── ReportPreview/ (6 files)
+├── Setting/ (50+ files)
+├── Trasaksi/ (500+ files)
+└── Unit/ (15 files)
+
+TOTAL FILE: 2000+ (.dfm dan .pas) 

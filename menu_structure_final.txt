@@ -1,0 +1,125 @@
+STRUKTUR MENU PWTKEU - VERSI FINAL
+====================================
+
+Main Menu
+├── File
+│   ├── Login
+│   ├── Password
+│   ├── Konfigurasi
+│   └── Exit
+│
+├── Master Data
+│   ├── Customer & Supplier
+│   │   ├── Customer
+│   │   ├── Supplier
+│   │   └── Contact
+│   │
+│   ├── Barang & Inventory
+│   │   ├── Barang
+│   │   ├── Jenis Barang
+│   │   ├── Kategori
+│   │   ├── Gudang
+│   │   └── Harga Jual
+│   │
+│   ├── Karyawan & Organisasi
+│   │   ├── Karyawan
+│   │   ├── Jabatan
+│   │   ├── Bagian
+│   │   └── Sales
+│   │
+│   ├── Keuangan
+│   │   ├── Perkiraan
+│   │   ├── Pajak
+│   │   ├── Hutang
+│   │   └── Piutang
+│   │
+│   └── Produksi
+│       ├── Mesin
+│       ├── BOM
+│       └── Proses
+│
+├── Transaksi
+│   ├── Pembelian
+│   │   ├── Purchase Order (PO)
+│   │   ├── Pembelian
+│   │   └── Retur Beli
+│   │
+│   ├── Penjualan
+│   │   ├── Sales Order (SO)
+│   │   ├── Penjualan
+│   │   ├── Jual Kasir
+│   │   └── Invoice PL
+│   │
+│   ├── Produksi
+│   │   ├── Jadwal Produksi
+│   │   ├── Produksi
+│   │   ├── Hasil Produksi
+│   │   ├── SPK
+│   │   └── SPB
+│   │
+│   ├── Inventory
+│   │   ├── Transfer
+│   │   ├── Koreksi
+│   │   └── Bon Sementara
+│   │
+│   └── Keuangan
+│       ├── Kas Bank
+│       ├── Memorial
+│       └── Hutang Piutang
+│
+├── Laporan
+│   ├── Master Data
+│   │   ├── Laporan Customer
+│   │   ├── Laporan Barang
+│   │   └── Laporan Karyawan
+│   │
+│   ├── Transaksi
+│   │   ├── Laporan Pembelian
+│   │   ├── Laporan Penjualan
+│   │   └── Laporan Produksi
+│   │
+│   ├── Keuangan
+│   │   ├── Neraca
+│   │   ├── Arus Kas
+│   │   └── Laporan Hutang Piutang
+│   │
+│   └── Report Preview
+│
+├── Setting
+│   ├── User Management
+│   │   ├── Pemakai
+│   │   ├── Menu
+│   │   └── Akses Gudang
+│   │
+│   ├── System
+│   │   ├── Periode
+│   │   ├── Lock Periode
+│   │   └── Tutup Buku
+│   │
+│   └── Posting
+│       ├── Posting
+│       └── Posting Jurnal Oto
+│
+└── Tools
+    ├── Browsing
+    ├── Dashboard
+    └── Desain
+
+INFORMASI TAMBAHAN:
+==================
+- Total File: 2000+ (.dfm dan .pas)
+- Main Form: MyProject/FrmUtama
+- Login Form: Setting/Login/frmLogin
+- Dashboard: Dasboard/FrmDasboard
+- Report Menu: ReportPreview/FrmMenuReport
+
+STRUKTUR FOLDER:
+===============
+├── Browsing/ (2 files)
+├── Dasboard/ (2 files)
+├── Master/ (1000+ files)
+├── MyProject/ (2 files)
+├── ReportPreview/ (6 files)
+├── Setting/ (50+ files)
+├── Trasaksi/ (500+ files)
+└── Unit/ (15 files) 

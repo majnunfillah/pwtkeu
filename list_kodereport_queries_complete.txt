@@ -1,0 +1,134 @@
+LIST KODE REPORT DAN QUERY DARI FrmReportPreview.pas - VERSI LENGKAP
+================================================================
+
+KodeReport		Nama Report					Query/Stored Procedure
+------------------------------------------------------------
+101			Master Perkiraan				Select * from vwPerkiraan a
+10101			Master Aktiva Tetap			Select * from vwaktiva a
+102			Master Neraca				select a.* from vwPerkiraan a
+103			Master Laba Rugi			select a.* from vwLabaRugiHPP a where Bulan=:0 and Tahun=:1 and IsLRHPP=0
+104			Master HPP				select a.* from vwLabaRugiHPP a where Bulan=:0 and Tahun=:1 and IsLRHPP=1
+1101			Daftar Gudang				select a.* from VwGudang a
+1104,1200		Daftar Kelompok Barang			select a.* from vwKelompok a
+1105			Daftar Kategori Barang			select a.* from vwKategori a
+1106			Daftar Sub Kategori Barang		select a.* from vwSubKategori a
+1107			Daftar Jenis Barang			select a.* from vwjenis a
+1108			Daftar Sub Jenis Barang		select a.* from vwSubjenis a
+1110			Daftar Supplier				select a.* from vwBrowsSupp a
+1298			Daftar Customer				select a.* from vwBrowsCust a
+1304			Daftar Valas				select a.* from vwValas a where Month(A.Tanggal)=:0 and year(tanggal)=:1
+20101			Laporan Kas Harian			exec Sp_LapSaldoAwal :0,:1,:2,:3
+20102			Laporan Bank				Complex query with multiple joins and calculations
+20103			Laporan Posisi Bank Kas Harian		exec Sp_LapPosisiBankKasHarian :0,:1
+201061-201064		Laporan Deposito				exec Sp_LapDeposito :0,:1,:2,:3,:4
+201071-201075		Laporan Giro Piutang			exec Sp_LapGiroPiutang :0,:1,:2,:3,:4,:5
+201081-201085		Laporan Giro Hutang			exec Sp_LapGiroHutang :0,:1,:2,:3,:4
+20109			Laporan Bon Sementara			exec sp_ReportBon :0,:1,:2,:3
+2020101-2020110		Laporan Jurnal				exec Sp_LapJurnal :0,:1,:2,:3
+20202			Laporan Buku Besar			exec SP_LapBKBesar :0,:1,:2,:3,:4
+202021			Laporan Buku Tambahan			exec sp_ReportBukuTambahan :0,:1,:2,:3,:4,:5,:6
+20203			Laporan Mutasi				exec Sp_ReportMutasi :0,:1,:2,:3
+20204			Laporan Biaya				exec Sp_LapBiaya :0,:1,:2,:3,:4
+202041			Laporan Biaya Tahunan			exec Sp_LapBiayaTahun :0,:1,:2,:3
+20205			Laporan Aktiva Tetap			exec sp_LapAktiva :0,:1,:2
+202051			Laporan Aktiva Tetap Tahunan		exec sp_LapAktivaTahunan :0,:1,:2,:3
+202052			Laporan Aktiva Tetap Pajak		exec sp_LapAktivaPajak :0,:1,:2,:3
+202053			Laporan Aktiva Tetap Pajak Kendaraan	exec sp_LapAktivaPajakKendaraan :0,:1,:2,:3
+20104			Laporan Arus Kas			exec sp_LapArusKas :0,:1,:2,:3
+20105			Laporan Arus Kas Periode		exec sp_LapArusKasPeriode :0,:1,:2,:3
+20206			Laporan Biaya Penyusutan		exec sp_LapSusutAktiva :0,:1,:2
+20301,20306		Kartu Hutang				exec Sp_ReportKartuHutang :0,:1,:2,:3,:4,:5,:6,:7,:8,:9
+20302			Sisa Hutang				exec Sp_ReportSisaHutang :0,:1,:2,:3,:4,:5,:6
+20303			Pelunasan Hutang			exec Sp_ReportPelunasanHutang :0,:1,:2,:3,:4,:5,:6,:7
+20304			Saldo Hutang				exec Sp_ReportSaldoHutang :0,:1,:2,:3,:4,:5,:6,:7
+20305,203050		Umur Hutang				exec sp_ReportUmurHutang :0,:1,:2,:3,:4,:5,:6
+20401,20406		Kartu Piutang				exec Sp_ReportKartuPiutang :0,:1,:2,:3,:4,:5,:6,:7,:8,:9
+20402			Sisa Piutang				exec Sp_ReportSisaPiutang :0,:1,:2,:3,:4,:5,:6
+20403			Pelunasan Piutang			exec Sp_ReportPelunasanPiutang :0,:1,:2,:3,:4,:5,:6,:7
+20404			Saldo Piutang				exec Sp_ReportSaldoHutang :0,:1,:2,:3,:4,:5,:6,:7
+20405,20407		Umur Piutang				exec sp_ReportUmurPiutang :0,:1,:2,:3,:4,:5,:6
+20501			Neraca Lajur				exec sp_NerajaLajur :0,:1,:2,:3,:4
+20502,20505		Laporan Laba Rugi			exec sp_ReportLabaRugi :0,:1,:2,:3,:4,:5,:6
+205021			Laporan Laba Rugi 2 Lajur		exec Sp_ReportLabaRugi2Lajur :0,:1,:2
+20503			Laporan Neraca Aktiva			exec sp_ReportNeracaAktiva :0,:1,:2
+205031			Laporan Neraca 2 Lajur			exec sp_ReportNeraca2Lajur :0,:1,:2
+20504			Laporan Neraca Penunjang		exec sp_LapNeracaPenunjang :0,:1,:2
+251010-251050		Laporan Pembelian			Select * from VwreportPembelian
+252010-252050		Laporan Retur Beli			Select * from VwreportRBeli
+301010-301050		Laporan Penjualan			Select * from VwreportJual
+302010-302050		Laporan Retur Jual			Select * from VwreportRJual
+253010			Laporan Outstanding SPK		Exec Sp_ReportOutStandingSPk :0,:1
+2530201-2530204		Laporan Purchasing Request		Exec Sp_ReportPurchasingReqDet :0,:1,:2,:3,:4,:5
+2540101-2540104		Laporan Outstanding PR			Exec Sp_reportoutStandingPR :0,:1,:2,:3,:4
+2540201-2540203		Laporan PO Detail			Exec Sp_ReportPOdet :0,:1,:2,:3,:4,:5
+25501-25503		Laporan Revisi PO			Exec Sp_ReportRevisiPOdet :0,:1,:2,:3,:4
+2560101-2560104		Laporan Outstanding PO			Exec Sp_ReportOutstandingPOdet :0,:1,:2,:3,:4
+2560201-2560204		Laporan Beli Gudang			Exec Sp_ReportBeliGudangDet :0,:1,:2,:3,:4
+25701-25704		Laporan Beli Reject			Exec Sp_ReportBeliRejectDet :0,:1,:2,:3,:4
+25711-25714		Laporan Penerimaan ACC			Exec Sp_reportBeliAccDet :0,:1,:2,:3,:4,:5
+25721-25723		Laporan R Pembelian Gudang		Exec Sp_reportRBeliGDGdet :0,:1,:2,:3,:4,:5
+25731-25733		Laporan Debet Note			Exec Sp_ReportDebetnoteDet :0,:1,:2,:3,:4,:5
+25741-25742		Laporan Invoice			Exec Sp_reportInVoiceDet :0,:1,:2,:3,:4,:5
+25761-25763		Laporan R Invoice			Exec Sp_reportRInVoiceDet :0,:1,:2,:3,:4
+3030101-3030105		Laporan SO				Exec Sp_reportSoDet :0,:1,:2,:3,:4,:5
+3030201-3030203		Laporan Outstanding SO			Exec Sp_ReportOutStandingSoDet :0,:1,:2,:3,:4
+3031101-3031103		Laporan Out SO				Exec Sp_reportOutSoDet :0,:1,:2,:3,:4
+3031201-3031203		Laporan SPP				Exec Sp_reportSppdet :0,:1,:2,:3,:4,:5
+3032101-3032103		Laporan Out SPP				Exec Sp_ReportOutSPPdet :0,:1,:2,:3,:4
+3032201-3032203		Laporan SPB				Exec Sp_reportSpbdet :0,:1,:2,:3,:4,:5
+3032301-3032303		Laporan SPB ACC				Exec Sp_reportSpbACCdet :0,:1,:2,:3,:4,:5
+3033101-3033103		Laporan Out SPB				Exec Sp_ReportOUtSPBDet :0,:1,:2,:3,:4
+3033201-3033206		Laporan Invoice Penjualan		Exec Sp_reportINvoicePenjualanDet :0,:1,:2,:3,:4,:5,:6
+303410-303440		Laporan R Invoice Penjualan		Exec Sp_reportRInvoicePenjualanDet :0,:1,:2,:3,:4,:5
+35101-35102		Laporan SPRK				Exec Sp_reportSPRK :0,:1,:2,:3,:4,:5
+4010101-4010102		Laporan Outstanding SPK			Exec Sp_reportOutSpk :0,:1,:2,:3,:4
+4010201-4010203		Laporan BP				Exec Sp_ReportBp :0,:1,:2,:3,:4,:5
+4010211-4010212		Laporan BP Lain				Exec Sp_ReportBpLain :0,:1,:2,:3,:4,:5
+4010301-4010302		Laporan BP ACC				Exec Sp_ReportBp :0,:1,:2,:3,:4,:5
+4010401-4010402		Laporan BP Proff				Exec Sp_reportBPProff :0,:1,:2,:3,:4,:5
+40201-40202		Laporan R Penyerahan Bahan		Exec Sp_reportRPenyerahanBahan :0,:1,:2,:3,:4,:5
+40211-40212		Laporan R Penyerahan Bahan Lain	Exec Sp_reportRPenyerahanBahanLain :0,:1,:2,:3,:4,:5
+402021-402022		Laporan R Penyerahan Bahan ACC	Exec Sp_reportRPenyerahanBahan :0,:1,:2,:3,:4,:5
+40301-40303		Laporan Permintaan Bahan		Exec Sp_reportPermintaanBahan :0,:1,:2,:3,:4,:5
+40351-40353		Laporan Permintaan Bahan ACC		Exec Sp_reportPermintaanBahan :0,:1,:2,:3,:4,:5
+40361-40362		Laporan Transfer				Exec Sp_ReportTransferDet :0,:1,:2,:3,:4,:5
+4040101-4040102		Laporan Outstanding BPPB		Select * from VwReportOutStandingBPPB
+4040201-4040202		Laporan BPPB Keluar			Select * from VwReportBPPBKeluar
+40501-40502		Laporan Ubah Kemasan Bahan		Exec Sp_reportUbahKemasanBahan :0,:1,:2,:3,:4
+40701-40702		Laporan Opname Bahan			Exec Sp_ReportOpnameBahan :0,:1,:2,:3,:4,:5
+40801-40802		Laporan Opname Barang			Exec Sp_Reportopnamebarang :0,:1,:2,:3,:4,:5
+40811-40812		Laporan Koreksi				Exec Sp_ReportKoreksiBahan :0,:1,:2,:3,:4,:5
+40851			Laporan Hasil Produksi			Exec Sp_ReportHasilPrdDet :0,:1,:2,:3,:4,:5
+40852			Laporan Hasil Produksi Per SPK		Exec Sp_reporthasilPRDDetPerSPK :0,:1,:2,:3,:4,:5
+40853			Laporan PRD				Exec Sp_ReportPRDDet :0,:1,:2,:3,:4,:5
+40854			Laporan Anggaran Realisasi		Exec Sp_reportAnggaranRealisasi :0,:1,:2,:3,:4,:5
+40855			Laporan Hasil Produksi Detail		Exec Sp_ReportHasilProduksiDet :0,:1,:2,:3,:4,:5
+40856			Laporan HPP Per SO			Exec Sp_reportHPPPerSO :0,:1,:2,:3,:4,:5
+40857			Laporan WIP Susulan			Exec Sp_ReportWipSusulan :0,:1,:2,:3,:4,:5
+40858			Laporan WIP				Exec Sp_ReportWIP :0,:1,:2,:3,:4,:5
+40859			Laporan Hitung Rincian WIP		Exec Sp_HitungRincianWip :0,:1,:2,:3,:4,:5
+40860			Laporan Hasil PRD Per SPK Per Tanggal	Exec Sp_reporthasilPRDDetPerSPKPertanggal :0,:1,:2,:3,:4,:5
+40861-40862		Laporan Hasil PRD ACC			Exec Sp_reporthasilPRDACCDet :0,:1,:2,:3,:4,:5
+40863			Laporan PRD Per Mesin			Exec Sp_ReportPRDPerMesin :0,:1,:2,:3,:4,:5
+40864			Laporan PRD Per SPK			Exec Sp_ReportPRDPerSPK :0,:1,:2,:3,:4,:5
+40865			Laporan Hasil PRD SO			Exec Sp_ReportHasilPrdSO :0,:1,:2,:3,:4,:5
+40866			Laporan Saldo Hasil Produksi		Exec Sp_ReportSaldoHasilProduksi :0,:1,:2,:3,:4,:5
+40867			Laporan WIP Buku Besar			Exec Sp_ReportWIPBukuBesar :0,:1,:2,:3,:4,:5
+40868			Laporan BJ Buku Besar			Exec Sp_ReportBJBukuBesar :0,:1,:2,:3,:4,:5
+40869			Laporan Outstanding HPD			Exec Sp_ReportOutStandingHPD :0,:1,:2,:3,:4,:5
+40870			Laporan Biaya Per Gudang		Exec Sp_reportBiayaPeGudang :0,:1,:2,:3,:4,:5
+40871			Laporan Biaya Per Invoice		Exec Sp_ReportBiayaPerInvoice :0,:1,:2,:3,:4,:5
+40872			Laporan Hasil PRD Invoice		Exec Sp_ReportHasilPrdDetInvoice :0,:1,:2,:3,:4,:5
+40873			Laporan Anggaran Realisasi Invoice	Exec Sp_reportAnggaranRealisasiInvoice :0,:1,:2,:3,:4,:5
+40874			Laporan Anggaran Realisasi Invoice Rek	Exec Sp_reportAnggaranRealisasiInvoiceRek :0,:1,:2,:3,:4,:5
+40875			Laporan Anggaran Realisasi Invoice Rek	Exec Sp_reportAnggaranRealisasiInvoiceRek :0,:1,:2,:3,:4,:5
+40876			Laporan Biaya Bahan			Exec Sp_ReportBiayaBahan :0,:1,:2,:3,:4,:5
+40881-40885		Laporan Finishing				Exec Sp_ReportFinishing :0,:1,:2,:3,:4,:5
+40883			Laporan Rencana Realisasi Bahan		Exec Sp_ReportRencanaRealisasiBahan :0,:1,:2,:3,:4,:5
+
+CATATAN:
+- Semua query menggunakan stored procedure (exec) untuk laporan transaksi
+- Parameter menggunakan :0, :1, :2, dst
+- File report menggunakan ekstensi .fr3
+- Beberapa report memiliki kondisi filter berdasarkan SelectedSemuaRecord
+- Report dibagi menjadi beberapa kategori: Master Data, Keuangan, Pembelian, Penjualan, Produksi 
